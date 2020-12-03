@@ -33,6 +33,11 @@ for(let prop in messages) {
      * props length in preparation for the random message.
      */
     let optionNum = randomNumGenerator(messages[prop].length);
+    /**
+     * A switch statement is essentially a shorthand if statement, taking
+     * the objects property here as the comparison operator. It's essentially
+     * saying if prop = 'greetings' do this, if prop = 'adjective' do this, etc.
+     */
     switch(prop) {
         case 'greetings':
             generatedMessage.push(greetings[optionNum])
@@ -48,6 +53,10 @@ for(let prop in messages) {
     };
 }
 
+/**
+ * Combines the objects with other strings to create a goofy inspirational
+ * quote message generator.
+ */
 function generateMessage(pieces) {
     return pieces[0] + ' if you\'re feeling ' + pieces[1] + ' just remember this quote "' + pieces[2] + '".';
 }
